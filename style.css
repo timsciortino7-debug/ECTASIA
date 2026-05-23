@@ -2,78 +2,93 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top, #142b63, transparent 35%),
-    linear-gradient(135deg, #050816, #0b1024);
+  background: #080d1c;
   color: white;
-  padding: 40px 8%;
+  padding: 45px 7%;
 }
 
 header {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 
 header h1 {
-  font-size: 45px;
-  color: #ffffff;
-  text-shadow: 0 0 20px #4da3ff;
+  font-size: 44px;
+  color: white;
+}
+
+header p {
+  margin-top: 10px;
+  color: #9fb3d9;
+}
+
+.category {
+  margin: 45px 0 18px;
+  font-size: 24px;
+  color: #4da3ff;
+  border-left: 4px solid #4da3ff;
+  padding-left: 12px;
 }
 
 .jobs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
+  gap: 16px;
 }
 
 .job {
-  background: rgba(15, 23, 51, 0.85);
-  border: 1px solid rgba(77, 163, 255, 0.35);
-  padding: 20px;
-  border-radius: 18px;
+  background: #101832;
+  border: 1px solid #22345f;
+  border-radius: 16px;
+  padding: 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 25px rgba(77, 163, 255, 0.12);
-  transition: 0.25s ease;
+  transition: 0.2s ease;
 }
 
 .job:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-3px);
   border-color: #4da3ff;
-  box-shadow: 0 0 30px rgba(77, 163, 255, 0.35);
+  background: #142044;
 }
 
 .job span {
-  color: #39ff88;
-  font-weight: bold;
-  background: rgba(57, 255, 136, 0.12);
+  font-size: 14px;
+  font-weight: 700;
   padding: 6px 10px;
   border-radius: 20px;
 }
 
+.job span:not(.closed) {
+  color: #35e98f;
+  background: rgba(53, 233, 143, 0.12);
+}
+
+.closed {
+  color: #ff5b5b !important;
+  background: rgba(255, 91, 91, 0.12);
+}
+
 @media (max-width: 600px) {
   body {
-    padding: 25px 15px;
+    padding: 30px 18px;
   }
 
   header h1 {
     font-size: 32px;
   }
 
+  .category {
+    font-size: 21px;
+  }
+
   .job {
     font-size: 14px;
   }
-}
-.category {
-  margin: 50px 0 20px;
-  font-size: 28px;
-  color: #4da3ff;
-  text-shadow: 0 0 10px rgba(77,163,255,0.5);
 }
