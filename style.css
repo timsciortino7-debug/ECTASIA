@@ -71,3 +71,9 @@ header h1 {
     font-size: 14px;
   }
 }
+.category {
+  margin: 50px 0 20px;
+  font-size: 28px;
+  color: #4da3ff;
+  text-shadow: 0 0 10px rgba(77,163,255,0.5);
+}
